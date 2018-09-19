@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta http-equiv="content-Type"content="text/html;charset=utf-8">
+<title></title>
+</head>
+<body>
+<?php
+$x="hello world";
+$y="hello world!";
+echo $x;
+echo"<br>";
+echo$y;echo"<br>";
+$x=5987;
+var_dump($x);
+?>
+</body>
+</html>
