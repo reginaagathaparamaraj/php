@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+</head>
+<body>
+<h1>a small example page to insert some data in to the mysql database using php</h1>
+<form action="insert.php" method="post">
+name:<input type="text" name="name"><br>
+email:<input type="text" name="email"><br>
+<input type="submit">
+</form>
+<?php
+?>
+</body>
+</html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+</head>
+<body>
+<?php 
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="nametable";
+$conn=new mysqli($servername,$username,$password,$dbname);
+if($conn->connect_error){
+die("connection failed:".$conn->connect_error);
+}
+$sql="INSERT INTO nametable(name,email)VALUES('$_POST[lname]')";
+if(mysqli_query($conn,$sql){
+echo "new record created successfully";
+}else{
+echo"error:".$sql."<br>".mysqli_error($conn);
+}
+mysqli_close($conn);
+?>
+</body>
+</html>
