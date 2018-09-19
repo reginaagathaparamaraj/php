@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+</head>
+<body>
+<form action="welcome.php" method="post">
+name:<input type="text" name="name"><br>
+email:<input type="text" name="email"><br>
+<input type="submit">
+</form>
+<?php
+?>
+</body>
+</html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+</head>
+<body>
+welcome<?php echo$_POST["name"];?><br>
+your email address is:<?phpecho$_POST["email"];?><br>
+</body>
+</html>
